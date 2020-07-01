@@ -1,4 +1,4 @@
-# VISUALIZATION OF BRAIN SURFACE DATA
+# Visualizing Brain Surface Data
 
 This package provides the functionality of visualizing data on a standard brain surface. This package leverages brain visualization functionality available in the connectome workbench made available as part of the Human Connectome Project [1]. 
 
