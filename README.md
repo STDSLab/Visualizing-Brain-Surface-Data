@@ -24,11 +24,25 @@ Operating systems: Linux, OS X
 Software: 
  - Workbench Command [2] that can be called using *$wb_command*
  - For option 2 and 3: 
-      - Julia v"1.0.x" with PyCall (v"1.91.4" tested)
-      - Python 3.x with nibabel (v"3.1.1" tested), numpy (v"1.18.2" tested)
+   - Julia v"1.0.x" with PyCall (v"1.91.4" tested)
+   - Python 3.x with nibabel (v"3.1.1" tested), numpy (v"1.18.2" tested)
+      
+## File Types
+
+-	**.scene**: Used by the HCP Workbench program to generate scenes.
+-	**.surf.gii**: Contains a blank 3D brain model for visualization.
+-	CIFTY files: This file type usually contains a 2D matrix with the grayordinates as the row and another information as the column. [3]
+  - **.dtseries.nii**: Contains a 2D matrix mapping the grayordinates to their timeseries.
+  - **.dlabel.nii**: Contains a 2D matrix mapping the grayordinates to their respective labels. Another way to understand this is this file contains information about which region is the grayordinate in.
+  - **.dscalar.nii**: Contains a 2D matrix mapping the grayordinates to any scalar values.
 
 ## Usage
 **1. Option 1**
+   
+   Description:
+   -	Filter out the regions given in the input text file.
+   -	Generate a new “.dlabel” file where the filtered regions are colored and the rest remain blank.
+   -	Generate a visualization image of the selected regions.
 
    How to run:
    
@@ -58,6 +72,10 @@ Software:
    - Image file has the name specified by *output_file* if given or *brain_image.png*, otherwise
 
 **2. Option 2**
+  
+   Description:
+   -	Used to map values to cortical surface regions (the outer part of the brain).
+   -	Create a new “.dscalar” file that contains a mapping of the grayordinates (according to their regions) to the values specified in the input text file.
 
    How to run
    
@@ -75,6 +93,10 @@ Software:
    
 **3. Option 3**
 
+   Description:
+   -	Used to map values to subcortical voxels (the center part of the brain, connected to the spinal cord).
+   -	Create a new “.dscalar” file that contains a mapping of the grayordinates (according to their voxels) to the values specified in the input text file.
+
    How to run
    
    ```
@@ -90,6 +112,9 @@ Software:
    - Image file named *brain_image.png* in the current folder
    
 **4. Option 4**
+
+   Description:
+	  - Generate a visualization image from the provided “.scene” file and “.dscalar” file.
 
    How to run
    
@@ -109,3 +134,5 @@ Software:
 [1] Human Connectome Project. https://www.humanconnectome.org
 
 [2] Workbench. https://www.humanconnectome.org/software/workbench-command
+
+[3] The minimal preprocessing pipelines for the Human Connectome Project https://www.sciencedirect.com/science/article/pii/S1053811913005053
