@@ -3,8 +3,8 @@
 This package provides the functionality of visualizing data on a standard brain surface. This package leverages brain visualization functionality available in the connectome workbench made available as part of the Human Connectome Project [1]. 
 
 This package provides two visualization options:
-1.	Visualize selected regions of interest on the brain surface (see Fig 1)
-2.	Visualize a desired metric for each region in a brain parcellation (see Fig 2)
+1. Visualize selected regions of interest on the brain surface (see Fig 1)
+2. Visualize a desired metric for each region in a brain parcellation (see Fig 2)
 3. Visualize a desired metric for each voxel in a brain parcellation
 4. Visualize a brain surface from data contained in a dscalar file
 
@@ -29,12 +29,12 @@ Software:
       
 ## File Types
 
--	**.scene**: Used by the HCP Workbench program to generate scenes.
--	**.surf.gii**: Contains a blank 3D brain model for visualization.
--	CIFTY files: This file type usually contains a 2D matrix with the grayordinates as the row and another information as the column. [3]
-  - **.dtseries.nii**: Contains a 2D matrix mapping the grayordinates to their timeseries.
-  - **.dlabel.nii**: Contains a 2D matrix mapping the grayordinates to their respective labels. Another way to understand this is this file contains information about which region is the grayordinate in.
-  - **.dscalar.nii**: Contains a 2D matrix mapping the grayordinates to any scalar values.
+ - **.scene**: Used by the HCP Workbench program to generate scenes.
+ - **.surf.gii**: Contains a blank 3D brain model for visualization.
+ - CIFTY files: This file type usually contains a 2D matrix with the grayordinates as the row and another information as the column. [3]
+   - **.dtseries.nii**: Contains a 2D matrix mapping the grayordinates to their timeseries.
+   - **.dlabel.nii**: Contains a 2D matrix mapping the grayordinates to their respective labels. Another way to understand this is this file contains information about which region is the grayordinate in.
+   - **.dscalar.nii**: Contains a 2D matrix mapping the grayordinates to any scalar values.
 
 ## Usage
 **1. Option 1**
