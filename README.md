@@ -114,7 +114,7 @@ Software:
 **4. Option 4**
 
    Description:
-	  - Generate a visualization image from the provided “.scene” file and “.dscalar” file.
+   - Generate a visualization image from the provided “.scene” file and “.dscalar” file.
 
    How to run
    
